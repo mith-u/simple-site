@@ -3,10 +3,11 @@ pipeline {
 
     stages {
         stage('Clone Repo') {
-            steps {
-                git 'https://github.com/mith-u/simple-site.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/mith-u/simple-site.git'
+    }
+}
+
         stage('Build & Deploy') {
             steps {
                 sh '''
